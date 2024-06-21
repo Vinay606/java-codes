@@ -1,7 +1,10 @@
 package arrays;
 
+import javax.print.attribute.HashPrintJobAttributeSet;
 import java.sql.SQLOutput;
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Count_occurence{
     public static void main(String[] ar)
@@ -28,6 +31,29 @@ public class Count_occurence{
                 System.out.println(Arrays.toString(counted));
             }
         }
+
+        // using hashmap
+        int[] array = {5,5,8,3,5,6,7,8,3,4,6,7};
+        HashMap<Integer,Integer> map = new HashMap<>();
+
+        for(int num : array)
+        {
+        if(map.containsKey(num))
+        {
+            map.put(num, map.get(num)+1);
+        }
+        else {
+            map.put(num,1);
+        }
+        }
+        //iterate through map
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            Integer key = entry.getKey();
+            Integer value = entry.getValue();
+            System.out.println("Element: " + entry.getKey() + ", Frequency: " + entry.getValue());
+        }
+
+
     }
 
 }
