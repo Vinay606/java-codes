@@ -1,5 +1,7 @@
 package arrays;
 
+import com.sun.jdi.Value;
+
 import java.util.*;
 
 public class Repeating_ele {
@@ -9,21 +11,24 @@ public class Repeating_ele {
 
         Map<Integer,Integer> map = new HashMap<Integer, Integer>();
 
-        for(int i=0;i<arr.length;i++)
-        {
-            if(map.containsKey(arr[i]))
-            {
-                map.put(arr[i],map.get(arr[i])+1);
-            }
-            else
-                map.put(arr[i],1);
+        for (int j : arr) {
+            if (map.containsKey(j)) {
+                map.put(j, map.get(j) + 1);
+            } else
+                map.put(j, 1);
         }
+
+        /*
+        * for(int i=0;i<=n-1;i++)
+        * map.put(arr[i], getOrDefault(arr[i], 0)+1);
+        * */
+
         System.out.println(map);
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             int key = entry.getKey();
             int value = entry.getValue();
             if(value >1)
-                System.out.println(map.get(key));
+                System.out.println(key +" "+value);
         }
     }
 

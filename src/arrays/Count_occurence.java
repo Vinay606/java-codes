@@ -48,9 +48,7 @@ public class Count_occurence{
         }
         //iterate through map
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            Integer key = entry.getKey();
-            Integer value = entry.getValue();
-            System.out.println("Element: " + entry.getKey() + ", Frequency: " + entry.getValue());
+            System.out.println(entry.getKey() + " " + entry.getValue());
         }
 
 
