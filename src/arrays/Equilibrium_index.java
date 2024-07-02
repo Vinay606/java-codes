@@ -18,7 +18,7 @@ public class Equilibrium_index {
             for(int k=i+1;k<n;k++)
                 right_sum += arr[k];
 
-            // compare 
+            // compare
             if(left_sum == right_sum)
                 System.out.println("Equilibrium index: "+i);
             else
