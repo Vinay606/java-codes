@@ -13,7 +13,7 @@ public class PrimeNumber {
             System.out.println("Neither prime nor composite");
         }
         else {
-            //iterate till num/2 coz after half the number itself is only the factor ex: 5 -> 1,5 8 -> 2,4,8
+            //iterate till num/2 coz after half the number itself is only the factor ex: 5 -> 1,5 | 8 -> 2,4,8
             int ctr = 0;
             for (int i = 2; i <= num / 2; i++) {
                 if (num % 2 == 0) {
