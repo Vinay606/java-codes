@@ -27,9 +27,9 @@ public class Removing_duplicates {
         {
             char temp = str.charAt(i);
             if(map.get(temp)>1)
-                continue;
-            else
                 sb.append(temp);
+            else
+                continue;
         }
      return sb.toString();
     }
